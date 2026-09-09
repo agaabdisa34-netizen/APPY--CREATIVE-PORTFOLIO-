@@ -1,4 +1,5 @@
-APPY CREATIVES — STYLESHEET
+/* =====================================================================
+   APPY CREATIVES — STYLESHEET
    Organized top to bottom: tokens → base → header → hero → work tracks
    → process → testimonials → faq → contact → footer → responsive.
    Search for a section's ALL-CAPS comment heading to jump to it.
@@ -220,14 +221,14 @@ a:focus-visible, button:focus-visible, summary:focus-visible {
   padding: 96px 24px 100px;
 }
 /* ✏️ EDIT ME: your photo sits here, faded behind the text. Upload a photo
-   to assets/images/hero-photo.jpg (exact name) and it will appear
-   automatically — nothing else to change. No photo yet? This section
-   just quietly shows the plain dark background instead. */
+   to images/hero-photo.jpg (exact name, top-level "images" folder) and
+   it will appear automatically — nothing else to change. No photo yet?
+   This section just quietly shows the plain dark background instead. */
 .hero::before {
   content: "";
   position: absolute;
   inset: 0;
-  background-image: url("assets/images/hero-photo.jpg");
+  background-image: url("images/hero-photo.jpg");
   background-size: cover;
   background-position: center top;
   opacity: 0.4;
