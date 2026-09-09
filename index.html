@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Appy Creatives — Video Editor & Motion Graphics</title>
+<meta name="description" content="Appy Creatives — short-form and long-form video editing and motion graphics by Abdisa, based in Addis Ababa." />
+
+<!-- ============================================================
+  This is the ONLY HTML file for the site. Every section of the
+  page lives here, top to bottom, in the order it appears.
+  Look for comments like:  <!-- ✏️ EDIT ME -->  to find the
+  spots you'll want to change first (text, links, videos).
+============================================================= -->
+
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@700;800;900&family=Work+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- SCRUBBER: a thin bar under the header that fills like a video
+     timeline playhead as you scroll down the page. Purely visual,
+     controlled by script.js — nothing to edit here. -->
+<div class="scrubber" aria-hidden="true">
+  <div class="scrubber__ticks"></div>
+  <div class="scrubber__playhead" id="playhead"></div>
+</div>
+
+<!-- ============ HEADER / NAV ============ -->
+<header class="site-header">
+  <div class="wrap site-header__inner">
+    <a href="#top" class="logo">Appy<span>Creatives</span></a>
+
+    <nav class="nav" id="nav">
+      <a href="#work">Work</a>
+      <a href="#process">Process</a>
+      <a href="#testimonials">Testimonials</a>
+      <a href="#faq">FAQ</a>
+      <a href="#contact" class="nav__cta">Start a project</a>
+    </nav>
+
+    <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- ============ HERO ============ -->
+  <section class="hero wrap">
+    <div class="hero__text reveal">
+      <h1>Every second earns its place.</h1>
+      <!-- ✏️ EDIT ME: swap in your own name / pitch -->
+      <p class="hero__sub">
+        I'm Abdisa — a motion graphics editor in Addis Ababa turning raw
+        footage into short-form videos and animated content for creators
+        and brands, from the first cut to final export.
+      </p>
+      <div class="hero__actions">
+        <a href="#work" class="btn btn--primary">Watch the reel</a>
+        <a href="#contact" class="btn btn--ghost">Start a project</a>
+      </div>
+
+      <!-- ✏️ EDIT ME: these three stats are placeholders — swap in your real numbers -->
+      <div class="stats">
+        <div class="stat">
+          <span class="stat__num">100+</span>
+          <span class="stat__label">Videos edited</span>
+        </div>
+        <div class="stat">
+          <span class="stat__num">48h</span>
+          <span class="stat__label">Typical turnaround</span>
+        </div>
+        <div class="stat">
+          <span class="stat__num">2</span>
+          <span class="stat__label">Apps mastered — Alight Motion &amp; CapCut</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero__reel reveal">
+      <div class="phone">
+        <div class="phone__notch"></div>
+        <div class="phone__screen">
+          <!-- ✏️ EDIT ME: replace YOUTUBE_VIDEO_ID_HERO with your showreel's YouTube ID
+               (the part after v= or after youtu.be/ in your video's URL) -->
+          <iframe
+            src="https://www.youtube.com/embed/YOUTUBE_VIDEO_ID_HERO"
+            title="Showreel"
+            loading="lazy"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen>
+          </iframe>
+        </div>
+      </div>
+      <span class="clip-code">REEL — 2026</span>
+    </div>
+  </section>
+
+  <!-- ============ WORK — TRACK 1: SHORT-FORM ============ -->
+  <section class="track" id="work">
+    <div class="wrap track__head reveal">
+      <div>
+        <span class="eyebrow-mono">TRACK 01</span>
+        <h2>Short-form, cut for the scroll</h2>
+        <p class="section-sub">
+          Vertical edits built for TikTok, Reels and Shorts — hook-first
+          pacing, captions and sound design that keep the thumb still.
+        </p>
+      </div>
+      <div class="track__nav">
+        <button class="arrow" data-scroll="shorts" data-dir="-1" aria-label="Scroll left">‹</button>
+        <button class="arrow" data-scroll="shorts" data-dir="1" aria-label="Scroll right">›</button>
+      </div>
+    </div>
+
+    <div class="filmstrip filmstrip--vertical" id="shorts">
+      <!-- ✏️ EDIT ME: duplicate a .clip block for every short you want to show.
+           Replace the YouTube ID and the two text labels each time. -->
+      <article class="clip clip--vertical">
+        <div class="clip__frame">
+          <iframe src="https://www.youtube.com/embed/YOUTUBE_VIDEO_ID_SHORT_1" title="Short 1" loading="lazy" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <div class="clip__meta">
+          <span class="clip__code">CLIP 01</span>
+          <span class="clip__title">Brand launch teaser</span>
+        </div>
+      </article>
+
+      <article class="clip clip--vertical">
+        <div class="clip__frame">
+          <iframe src="https://www.youtube.com/embed/YOUTUBE_VIDEO_ID_SHORT_2" title="Short 2" loading="lazy" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <div class="clip__meta">
+          <span class="clip__code">CLIP 02</span>
+          <span class="clip__title">Product unboxing edit</span>
+        </div>
+      </article>
+
+      <article class="clip clip--vertical">
+        <div class="clip__frame">
+          <iframe src="https://www.youtube.com/embed/YOUTUBE_VIDEO_ID_SHORT_3" title="Short 3" loading="lazy" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <div class="clip__meta">
+          <span class="clip__code">CLIP 03</span>
+          <span class="clip__title">Podcast highlight clip</span>
+        </div>
+      </article>
+
+      <article class="clip clip--vertical">
+        <div class="clip__frame">
+          <iframe src="https://www.youtube.com/embed/YOUTUBE_VIDEO_ID_SHORT_4" title="Short 4" loading="lazy" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <div class="clip__meta">
+          <span class="clip__code">CLIP 04</span>
+          <span class="clip__title">Motion graphics intro</span>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- ============ WORK — TRACK 2: LONG-FORM ============ -->
+  <section class="track track--alt">
+    <div class="wrap track__head reveal">
+      <div>
+        <span class="eyebrow-mono">TRACK 02</span>
+        <h2>Long-form, built to hold attention</h2>
+        <p class="section-sub">
+          YouTube videos and brand films edited for pacing, story and a
+          clean, considered finish.
+        </p>
+      </div>
+      <div class="track__nav">
+        <button class="arrow" data-scroll="longform" data-dir="-1" aria-label="Scroll left">‹</button>
+        <button class="arrow" data-scroll="longform" data-dir="1" aria-label="Scroll right">›</button>
+      </div>
+    </div>
+
+    <div class="filmstrip filmstrip--horizontal" id="longform">
+      <!-- ✏️ EDIT ME: same idea — duplicate this block per long-form video -->
+      <article class="clip clip--horizontal">
+        <div class="clip__frame">
+          <iframe src="https://www.youtube.com/embed/YOUTUBE_VIDEO_ID_LONG_1" title="Long-form 1" loading="lazy" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <div class="clip__meta">
+          <span class="clip__code">FILM 01</span>
+          <span class="clip__title">Company story, 6 min</span>
+        </div>
+      </article>
+
+      <article class="clip clip--horizontal">
+        <div class="clip__frame">
+          <iframe src="https://www.youtube.com/embed/YOUTUBE_VIDEO_ID_LONG_2" title="Long-form 2" loading="lazy" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <div class="clip__meta">
+          <span class="clip__code">FILM 02</span>
+          <span class="clip__title">Explainer with motion graphics</span>
+        </div>
+      </article>
+
+      <article class="clip clip--horizontal">
+        <div class="clip__frame">
+          <iframe src="https://www.youtube.com/embed/YOUTUBE_VIDEO_ID_LONG_3" title="Long-form 3" loading="lazy" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <div class="clip__meta">
+          <span class="clip__code">FILM 03</span>
+          <span class="clip__title">Documentary-style feature</span>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- ============ PROCESS ============ -->
+  <section class="process wrap" id="process">
+    <div class="reveal">
+      <span class="eyebrow-mono">SEQUENCE</span>
+      <h2>How a project moves</h2>
+    </div>
+
+    <ol class="steps reveal">
+      <li class="step">
+        <span class="step__code">00:01</span>
+        <h3>Brief</h3>
+        <p>Send your raw footage and a few notes on tone, platform and deadline.</p>
+      </li>
+      <li class="step">
+        <span class="step__code">00:02</span>
+        <h3>Edit</h3>
+        <p>I cut, grade and sound-design a first version, then send it over for review.</p>
+      </li>
+      <li class="step">
+        <span class="step__code">00:03</span>
+        <h3>Deliver</h3>
+        <p>Two rounds of revisions are included, then you get the final export in whatever format you need.</p>
+      </li>
+    </ol>
+  </section>
+
+  <!-- ============ TESTIMONIALS (styled like subtitle captions) ============ -->
+  <section class="captions wrap" id="testimonials">
+    <div class="reveal">
+      <span class="eyebrow-mono">TESTIMONIALS</span>
+      <h2>What clients say after the export</h2>
+    </div>
+
+    <!-- ✏️ EDIT ME: these four are placeholders — swap in real client feedback.
+         Each <li> is one caption card; add or remove as needed. -->
+    <div class="caption-stage reveal">
+      <ul class="caption-list" id="captionList">
+        <li class="caption-card is-active">
+          <p>&ldquo;Sent over raw clips on a Sunday night, had a finished short by Tuesday morning.&rdquo;</p>
+          <div class="lower-third"><span class="lower-third__name">Client Name</span><span class="lower-third__role">Content creator</span></div>
+        </li>
+        <li class="caption-card">
+          <p>&ldquo;Understood the pacing I wanted without me having to explain it twice.&rdquo;</p>
+          <div class="lower-third"><span class="lower-third__name">Client Name</span><span class="lower-third__role">Small business owner</span></div>
+        </li>
+        <li class="caption-card">
+          <p>&ldquo;Clean transitions, good sound design, delivered right on time.&rdquo;</p>
+          <div class="lower-third"><span class="lower-third__name">Client Name</span><span class="lower-third__role">Podcast host</span></div>
+        </li>
+        <li class="caption-card">
+          <p>&ldquo;My favourite part is how fast the turnaround is without the quality dropping.&rdquo;</p>
+          <div class="lower-third"><span class="lower-third__name">Client Name</span><span class="lower-third__role">Upwork client</span></div>
+        </li>
+      </ul>
+      <div class="caption-controls">
+        <button id="capPrev" aria-label="Previous testimonial">‹</button>
+        <div class="caption-dots" id="capDots"></div>
+        <button id="capNext" aria-label="Next testimonial">›</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FAQ ============ -->
+  <section class="faq wrap" id="faq">
+    <div class="reveal">
+      <span class="eyebrow-mono">FAQ</span>
+      <h2>Before you send footage</h2>
+    </div>
+
+    <!-- Native <details>/<summary> — accessible and needs no JavaScript.
+         ✏️ EDIT ME: change the questions/answers, or copy a <details> block to add more. -->
+    <div class="accordion reveal">
+      <details class="accordion__item" open>
+        <summary>What software do you edit in?</summary>
+        <p>Alight Motion and CapCut, both on mobile. It's a fully mobile workflow, start to final export.</p>
+      </details>
+      <details class="accordion__item">
+        <summary>How do I send you my footage?</summary>
+        <p>A shared Google Drive or Dropbox folder works best for raw clips. For quick short-form jobs, WeTransfer is fine too.</p>
+      </details>
+      <details class="accordion__item">
+        <summary>How many revisions are included?</summary>
+        <p>Two rounds of revisions come with every project. Anything beyond that is billed at a small hourly add-on.</p>
+      </details>
+      <details class="accordion__item">
+        <summary>What formats do you deliver in?</summary>
+        <p>MP4 at whatever resolution and aspect ratio your platform needs — 9:16 for Shorts/Reels/TikTok, 16:9 for YouTube.</p>
+      </details>
+      <details class="accordion__item">
+        <summary>Do you work with international clients?</summary>
+        <p>Yes — most of my client work comes through Upwork alongside local Ethiopian clients. Time zones aren't a problem.</p>
+      </details>
+      <details class="accordion__item">
+        <summary>How fast can you turn a video around?</summary>
+        <p>Short-form edits typically land within 24–48 hours. Long-form videos depend on length and complexity — I'll always quote a timeline up front.</p>
+      </details>
+    </div>
+  </section>
+
+  <!-- ============ CONTACT / FOOTER CTA ============ -->
+  <section class="cta wrap" id="contact">
+    <h2 class="reveal">Got footage that needs a good edit?</h2>
+    <!-- ✏️ EDIT ME: replace with your real email address -->
+    <a href="mailto:YOUR_EMAIL@example.com" class="btn btn--primary btn--lg reveal">Email me</a>
+
+    <!-- ✏️ EDIT ME: replace # with your real profile links, or delete a line you don't use -->
+    <div class="socials reveal">
+      <a href="#" target="_blank" rel="noopener">Instagram</a>
+      <a href="#" target="_blank" rel="noopener">TikTok</a>
+      <a href="#" target="_blank" rel="noopener">Upwork</a>
+      <a href="#" target="_blank" rel="noopener">Telegram</a>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap site-footer__inner">
+    <span>© 2026 Appy Creatives</span>
+    <span>Addis Ababa, Ethiopia</span>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
