@@ -1,10 +1,10 @@
-DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Appy Creatives — Video Editor & Motion Graphics</title>
-<meta name="description" content="Appy Creatives — short-form and long-form video editing and motion graphics by Abdisa, based in Addis Ababa." />
+<title>Appy Creatives — Real Estate Video Editor</title>
+<meta name="description" content="Appy Creatives — real estate video editing, property reels, motion graphics and video storytelling." />
 
 <!-- ============================================================
   This is the ONLY HTML file for the site. Every section of the
@@ -36,10 +36,11 @@ DOCTYPE html>
 
     <nav class="nav" id="nav">
       <a href="#work">Work</a>
+      <a href="#before-after">Before / After</a>
+      <a href="#services">Services</a>
       <a href="#process">Process</a>
-      <a href="#testimonials">Testimonials</a>
       <a href="#faq">FAQ</a>
-      <a href="#contact" class="nav__cta">Start a project</a>
+      <a href="#contact" class="nav__cta">Work with Appy</a>
     </nav>
 
     <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false">
@@ -53,269 +54,335 @@ DOCTYPE html>
   <!-- ============ HERO ============ -->
   <section class="hero wrap">
     <div class="hero__text reveal">
-      <h1>Every second earns its place.</h1>
-      <!-- ✏️ EDIT ME: swap in your own name / pitch -->
+      <span class="eyebrow-mono">REAL ESTATE VIDEO EDITOR</span>
+      <h1>Appy Creatives</h1>
+      <!-- ✏️ EDIT ME: adjust this positioning statement to your voice -->
       <p class="hero__sub">
-        I'm Abdisa — a motion graphics editor in Addis Ababa turning raw
-        footage into short-form videos and animated content for creators
-        and brands, from the first cut to final export.
+        I edit short-form and long-form video for real estate brands,
+        agents and developers — turning raw property footage into
+        content that holds attention and shows a property at its best.
       </p>
       <div class="hero__actions">
-        <a href="#work" class="btn btn--primary">Watch the reel</a>
-        <a href="#contact" class="btn btn--ghost">Start a project</a>
+        <a href="#intro" class="btn btn--primary">Watch the intro</a>
+        <a href="#contact" class="btn btn--ghost">Work with Appy</a>
       </div>
-
-      <!-- ✏️ EDIT ME: these three stats are placeholders — swap in your real numbers -->
-      <div class="stats">
-        <div class="stat">
-          <span class="stat__num">100+</span>
-          <span class="stat__label">Videos edited</span>
-        </div>
-        <div class="stat">
-          <span class="stat__num">48h</span>
-          <span class="stat__label">Typical turnaround</span>
-        </div>
-        <div class="stat">
-          <span class="stat__num">3</span>
-          <span class="stat__label">Tools mastered — After Effects, CapCut &amp; Alight Motion</span>
-        </div>
-      </div>
-    </div>
-
-    <div class="hero__reel reveal">
-      <div class="reel-frame">
-        <!-- ✏️ EDIT ME: replace YOUTUBE_VIDEO_ID_HERO with your showreel's YouTube ID
-             (the part after v= or after youtu.be/ in your video's URL) -->
-        <iframe
-          src="https://www.youtube.com/embed/YOUTUBE_VIDEO_ID_HERO"
-          title="Showreel"
-          loading="lazy"
-          frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen>
-        </iframe>
-      </div>
-      <span class="clip-code">REEL — 2026</span>
     </div>
   </section>
 
-  <!-- ============ WORK — TRACK 1: SHORT-FORM ============ -->
+  <!-- ============ INTRO VIDEO ============ -->
+  <section class="intro wrap" id="intro">
+    <div class="reveal intro__head">
+      <span class="eyebrow-mono">INTRODUCTION</span>
+      <p class="section-sub intro__sub">
+        A short introduction to who Appy is, who Appy helps, and how
+        Appy approaches real estate video.
+      </p>
+    </div>
+    <div class="reel-frame reveal">
+      <!-- ✏️ EDIT ME: replace YOUTUBE_INTRO_URL with your intro video's YouTube ID
+           (the part after v= or after youtu.be/ in your video's URL) -->
+      <iframe
+        src="https://www.youtube.com/embed/YOUTUBE_INTRO_URL"
+        title="Introduction"
+        loading="lazy"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen>
+      </iframe>
+    </div>
+    <span class="clip-code clip-code--center">INTRO — 2026</span>
+  </section>
+
+  <!-- ============ SELECTED REAL ESTATE WORK ============ -->
   <section class="track" id="work">
     <div class="wrap track__head reveal">
       <div>
-        <span class="eyebrow-mono">TRACK 01</span>
-        <h2>Short-form, cut for the scroll</h2>
+        <span class="eyebrow-mono">SELECTED WORK</span>
+        <h2>Selected real estate work</h2>
         <p class="section-sub">
-          Vertical edits built for TikTok, Reels and Shorts — hook-first
-          pacing, captions and sound design that keep the thumb still.
+          Real estate video concepts and creative demonstrations by Appy.
         </p>
       </div>
       <div class="track__nav">
-        <button class="arrow" data-scroll="shorts" data-dir="-1" aria-label="Scroll left">‹</button>
-        <button class="arrow" data-scroll="shorts" data-dir="1" aria-label="Scroll right">›</button>
+        <button class="arrow" data-scroll="selected-work" data-dir="-1" aria-label="Scroll left">‹</button>
+        <button class="arrow" data-scroll="selected-work" data-dir="1" aria-label="Scroll right">›</button>
       </div>
     </div>
 
-    <div class="filmstrip filmstrip--vertical" id="shorts">
-      <!-- ✏️ EDIT ME: duplicate a .clip block for every short you want to show.
-           Replace the YouTube ID and the two text labels each time. -->
+    <div class="filmstrip filmstrip--vertical" id="selected-work">
+      <!-- ✏️ EDIT ME: duplicate a .clip block for each project. Replace the
+           YouTube ID, the tag (e.g. "Independent Demo" or "Client Project"),
+           the title, and the one-line description each time. Only use
+           "Client Project" if the work was actually commissioned. -->
       <article class="clip clip--vertical">
         <div class="clip__frame">
-          <iframe src="https://www.youtube.com/embed/YOUTUBE_VIDEO_ID_SHORT_1" title="Short 1" loading="lazy" frameborder="0" allowfullscreen></iframe>
+          <iframe src="https://www.youtube.com/embed/YOUTUBE_PROJECT_01_URL" title="Project 1" loading="lazy" frameborder="0" allowfullscreen></iframe>
         </div>
         <div class="clip__meta">
-          <span class="clip__code">CLIP 01</span>
-          <span class="clip__title">Untitled project</span>
+          <div class="clip__meta-top">
+            <span class="clip__code">PROJECT 01</span>
+            <span class="clip__tag">Independent Demo</span>
+          </div>
+          <span class="clip__title">Untitled property</span>
+          <p class="clip__desc">One-line description of the property and the editing approach.</p>
         </div>
       </article>
 
       <article class="clip clip--vertical">
         <div class="clip__frame">
-          <iframe src="https://www.youtube.com/embed/YOUTUBE_VIDEO_ID_SHORT_2" title="Short 2" loading="lazy" frameborder="0" allowfullscreen></iframe>
+          <iframe src="https://www.youtube.com/embed/YOUTUBE_PROJECT_02_URL" title="Project 2" loading="lazy" frameborder="0" allowfullscreen></iframe>
         </div>
         <div class="clip__meta">
-          <span class="clip__code">CLIP 02</span>
-          <span class="clip__title">Untitled project</span>
+          <div class="clip__meta-top">
+            <span class="clip__code">PROJECT 02</span>
+            <span class="clip__tag">Independent Demo</span>
+          </div>
+          <span class="clip__title">Untitled property</span>
+          <p class="clip__desc">One-line description of the property and the editing approach.</p>
         </div>
       </article>
 
       <article class="clip clip--vertical">
         <div class="clip__frame">
-          <iframe src="https://www.youtube.com/embed/YOUTUBE_VIDEO_ID_SHORT_3" title="Short 3" loading="lazy" frameborder="0" allowfullscreen></iframe>
+          <iframe src="https://www.youtube.com/embed/YOUTUBE_PROJECT_03_URL" title="Project 3" loading="lazy" frameborder="0" allowfullscreen></iframe>
         </div>
         <div class="clip__meta">
-          <span class="clip__code">CLIP 03</span>
-          <span class="clip__title">Untitled project</span>
+          <div class="clip__meta-top">
+            <span class="clip__code">PROJECT 03</span>
+            <span class="clip__tag">Concept</span>
+          </div>
+          <span class="clip__title">Untitled property</span>
+          <p class="clip__desc">One-line description of the property and the editing approach.</p>
         </div>
       </article>
 
       <article class="clip clip--vertical">
         <div class="clip__frame">
-          <iframe src="https://www.youtube.com/embed/YOUTUBE_VIDEO_ID_SHORT_4" title="Short 4" loading="lazy" frameborder="0" allowfullscreen></iframe>
+          <iframe src="https://www.youtube.com/embed/YOUTUBE_PROJECT_04_URL" title="Project 4" loading="lazy" frameborder="0" allowfullscreen></iframe>
         </div>
         <div class="clip__meta">
-          <span class="clip__code">CLIP 04</span>
-          <span class="clip__title">Untitled project</span>
+          <div class="clip__meta-top">
+            <span class="clip__code">PROJECT 04</span>
+            <span class="clip__tag">Concept</span>
+          </div>
+          <span class="clip__title">Untitled property</span>
+          <p class="clip__desc">One-line description of the property and the editing approach.</p>
+        </div>
+      </article>
+
+      <article class="clip clip--vertical">
+        <div class="clip__frame">
+          <iframe src="https://www.youtube.com/embed/YOUTUBE_PROJECT_05_URL" title="Project 5" loading="lazy" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <div class="clip__meta">
+          <div class="clip__meta-top">
+            <span class="clip__code">PROJECT 05</span>
+            <span class="clip__tag">Independent Demo</span>
+          </div>
+          <span class="clip__title">Untitled property</span>
+          <p class="clip__desc">One-line description of the property and the editing approach.</p>
         </div>
       </article>
     </div>
   </section>
 
-  <!-- ============ WORK — TRACK 2: LONG-FORM ============ -->
-  <section class="track track--alt">
-    <div class="wrap track__head reveal">
-      <div>
-        <span class="eyebrow-mono">TRACK 02</span>
-        <h2>Long-form, built to hold attention</h2>
-        <p class="section-sub">
-          YouTube videos and brand films edited for pacing, story and a
-          clean, considered finish.
-        </p>
+  <!-- ============ BEFORE / AFTER ============ -->
+  <section class="compares wrap" id="before-after">
+    <div class="reveal">
+      <span class="eyebrow-mono">BEFORE → AFTER</span>
+      <h2>See the difference</h2>
+      <p class="section-sub">
+        Selected transformations — the original clip next to the Appy
+        version, and what changed.
+      </p>
+    </div>
+
+    <!-- ✏️ EDIT ME: duplicate a whole .compare block per transformation.
+         Replace both YouTube IDs, the category tag, and the three notes. -->
+    <div class="compare reveal">
+      <div class="compare__videos">
+        <div class="compare__video">
+          <span class="compare__label">Original</span>
+          <div class="clip__frame clip__frame--tall">
+            <iframe src="https://www.youtube.com/embed/YOUTUBE_ORIGINAL_01_URL" title="Original 1" loading="lazy" frameborder="0" allowfullscreen></iframe>
+          </div>
+        </div>
+        <div class="compare__video">
+          <span class="compare__label compare__label--accent">Appy Version</span>
+          <div class="clip__frame clip__frame--tall">
+            <iframe src="https://www.youtube.com/embed/YOUTUBE_APPY_01_URL" title="Appy version 1" loading="lazy" frameborder="0" allowfullscreen></iframe>
+          </div>
+        </div>
       </div>
-      <div class="track__nav">
-        <button class="arrow" data-scroll="longform" data-dir="-1" aria-label="Scroll left">‹</button>
-        <button class="arrow" data-scroll="longform" data-dir="1" aria-label="Scroll right">›</button>
+      <div class="compare__note">
+        <span class="eyebrow-mono">HOOK</span>
+        <p><strong>What was weak:</strong> the original opens slowly, so a viewer can scroll past before the property even appears.</p>
+        <p><strong>What Appy changed:</strong> moved the strongest shot to the first two seconds and added a text hook.</p>
+        <p><strong>Why it matters:</strong> a viewer decides whether to keep watching within the first couple of seconds.</p>
       </div>
     </div>
 
-    <div class="filmstrip filmstrip--horizontal" id="longform">
-      <!-- ✏️ EDIT ME: same idea — duplicate this block per long-form video -->
-      <article class="clip clip--horizontal">
-        <div class="clip__frame">
-          <iframe src="https://www.youtube.com/embed/YOUTUBE_VIDEO_ID_LONG_1" title="Long-form 1" loading="lazy" frameborder="0" allowfullscreen></iframe>
+    <div class="compare reveal">
+      <div class="compare__videos">
+        <div class="compare__video">
+          <span class="compare__label">Original</span>
+          <div class="clip__frame clip__frame--tall">
+            <iframe src="https://www.youtube.com/embed/YOUTUBE_ORIGINAL_02_URL" title="Original 2" loading="lazy" frameborder="0" allowfullscreen></iframe>
+          </div>
         </div>
-        <div class="clip__meta">
-          <span class="clip__code">FILM 01</span>
-          <span class="clip__title">Untitled project</span>
+        <div class="compare__video">
+          <span class="compare__label compare__label--accent">Appy Version</span>
+          <div class="clip__frame clip__frame--tall">
+            <iframe src="https://www.youtube.com/embed/YOUTUBE_APPY_02_URL" title="Appy version 2" loading="lazy" frameborder="0" allowfullscreen></iframe>
+          </div>
         </div>
-      </article>
-
-      <article class="clip clip--horizontal">
-        <div class="clip__frame">
-          <iframe src="https://www.youtube.com/embed/YOUTUBE_VIDEO_ID_LONG_2" title="Long-form 2" loading="lazy" frameborder="0" allowfullscreen></iframe>
-        </div>
-        <div class="clip__meta">
-          <span class="clip__code">FILM 02</span>
-          <span class="clip__title">Untitled project</span>
-        </div>
-      </article>
-
-      <article class="clip clip--horizontal">
-        <div class="clip__frame">
-          <iframe src="https://www.youtube.com/embed/YOUTUBE_VIDEO_ID_LONG_3" title="Long-form 3" loading="lazy" frameborder="0" allowfullscreen></iframe>
-        </div>
-        <div class="clip__meta">
-          <span class="clip__code">FILM 03</span>
-          <span class="clip__title">Untitled project</span>
-        </div>
-      </article>
+      </div>
+      <div class="compare__note">
+        <span class="eyebrow-mono">PACING</span>
+        <p><strong>What was weak:</strong> similar shots run back to back, so the video starts to drag around the middle.</p>
+        <p><strong>What Appy changed:</strong> trimmed repeated shots and varied the rhythm between wide and close angles.</p>
+        <p><strong>Why it matters:</strong> steady pacing keeps a viewer watching all the way to the property's best feature.</p>
+      </div>
     </div>
   </section>
 
-  <!-- ============ PROCESS ============ -->
+  <!-- ============ WHAT I CREATE (SERVICES) ============ -->
+  <section class="services wrap" id="services">
+    <div class="reveal">
+      <span class="eyebrow-mono">SERVICES</span>
+      <h2>What I create</h2>
+    </div>
+
+    <div class="services-grid reveal">
+      <div class="service-card">
+        <h3>Property Reels</h3>
+        <p>Short-form videos built around a single property — the shots that sell it, in the order that keeps someone watching.</p>
+      </div>
+      <div class="service-card">
+        <h3>Property Storytelling</h3>
+        <p>Turning a folder of raw clips into a video with a clear beginning, middle and end.</p>
+      </div>
+      <div class="service-card">
+        <h3>Hooks &amp; Retention</h3>
+        <p>Fixing the opening seconds, then the pacing that keeps people watching past them.</p>
+      </div>
+      <div class="service-card">
+        <h3>Motion Graphics</h3>
+        <p>Maps, pricing, square footage, amenities and labels, animated in rather than pasted on.</p>
+      </div>
+      <div class="service-card">
+        <h3>AI-Assisted B-Roll</h3>
+        <p>Supporting visuals for moments raw footage can't cover — used to support the story, not replace it.</p>
+      </div>
+      <div class="service-card">
+        <h3>Sound + Color</h3>
+        <p>Music, sound design and color correction that make a property feel the way it should.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ WHY APPY ============ -->
+  <section class="why wrap">
+    <div class="reveal">
+      <span class="eyebrow-mono">APPROACH</span>
+      <h2>More than cutting footage</h2>
+      <p class="section-sub why__body">
+        Editing a property video isn't just trimming clips together.
+        It's deciding what a viewer notices first, what they understand
+        about the space, and what makes them keep watching instead of
+        scrolling past.
+      </p>
+      <p class="pull-quote">&ldquo;Appy sees what other people miss.&rdquo;</p>
+    </div>
+  </section>
+
+  <!-- ============ HOW I WORK ============ -->
   <section class="process wrap" id="process">
     <div class="reveal">
-      <span class="eyebrow-mono">SEQUENCE</span>
-      <h2>How a project moves</h2>
+      <span class="eyebrow-mono">PROCESS</span>
+      <h2>How I work</h2>
     </div>
 
     <ol class="steps reveal">
       <li class="step">
         <span class="step__code">00:01</span>
-        <h3>Brief</h3>
-        <p>Send your raw footage and a few notes on tone, platform and deadline.</p>
+        <h3>Understand</h3>
+        <p>Property, audience, location, offer and objective.</p>
       </li>
       <li class="step">
         <span class="step__code">00:02</span>
-        <h3>Edit</h3>
-        <p>I cut, grade and sound-design a first version, then send it over for review.</p>
+        <h3>Plan</h3>
+        <p>Hook, story, visual structure and supporting B-roll.</p>
       </li>
       <li class="step">
         <span class="step__code">00:03</span>
+        <h3>Edit</h3>
+        <p>Pacing, motion, captions, sound, color and storytelling.</p>
+      </li>
+      <li class="step">
+        <span class="step__code">00:04</span>
+        <h3>Review</h3>
+        <p>You review the first version and share feedback.</p>
+      </li>
+      <li class="step">
+        <span class="step__code">00:05</span>
         <h3>Deliver</h3>
-        <p>Two rounds of revisions are included, then you get the final export in whatever format you need.</p>
+        <p>Final, platform-ready video.</p>
       </li>
     </ol>
-  </section>
-
-  <!-- ============ TESTIMONIALS (styled like subtitle captions) ============ -->
-  <section class="captions wrap" id="testimonials">
-    <div class="reveal">
-      <span class="eyebrow-mono">TESTIMONIALS</span>
-      <h2>What clients say after the export</h2>
-    </div>
-
-    <!-- ✏️ EDIT ME: these four are placeholders — swap in real client feedback.
-         Each <li> is one caption card; add or remove as needed. -->
-    <div class="caption-stage reveal">
-      <ul class="caption-list" id="captionList">
-        <li class="caption-card is-active">
-          <p>&ldquo;Sent over raw clips on a Sunday night, had a finished short by Tuesday morning.&rdquo;</p>
-          <div class="lower-third"><span class="lower-third__name">Client Name</span><span class="lower-third__role">Content creator</span></div>
-        </li>
-        <li class="caption-card">
-          <p>&ldquo;Understood the pacing I wanted without me having to explain it twice.&rdquo;</p>
-          <div class="lower-third"><span class="lower-third__name">Client Name</span><span class="lower-third__role">Small business owner</span></div>
-        </li>
-        <li class="caption-card">
-          <p>&ldquo;Clean transitions, good sound design, delivered right on time.&rdquo;</p>
-          <div class="lower-third"><span class="lower-third__name">Client Name</span><span class="lower-third__role">Podcast host</span></div>
-        </li>
-        <li class="caption-card">
-          <p>&ldquo;My favourite part is how fast the turnaround is without the quality dropping.&rdquo;</p>
-          <div class="lower-third"><span class="lower-third__name">Client Name</span><span class="lower-third__role">Upwork client</span></div>
-        </li>
-      </ul>
-      <div class="caption-controls">
-        <button id="capPrev" aria-label="Previous testimonial">‹</button>
-        <div class="caption-dots" id="capDots"></div>
-        <button id="capNext" aria-label="Next testimonial">›</button>
-      </div>
-    </div>
   </section>
 
   <!-- ============ FAQ ============ -->
   <section class="faq wrap" id="faq">
     <div class="reveal">
       <span class="eyebrow-mono">FAQ</span>
-      <h2>Before you send footage</h2>
+      <h2>Property video, answered</h2>
     </div>
 
     <!-- Native <details>/<summary> — accessible and needs no JavaScript.
          ✏️ EDIT ME: change the questions/answers, or copy a <details> block to add more. -->
     <div class="accordion reveal">
       <details class="accordion__item" open>
-        <summary>What software do you edit in?</summary>
-        <p>After Effects, Premiere Pro, CapCut and Alight Motion — whichever fits the project and the platform best.</p>
+        <summary>What type of real estate videos do you create?</summary>
+        <p>Property reels for single listings, walkthrough-style videos, developer and brand videos, and motion graphics overlays like maps and price or feature callouts.</p>
       </details>
       <details class="accordion__item">
-        <summary>How do I send you my footage?</summary>
-        <p>A shared Google Drive or Dropbox folder works best for raw clips. For quick short-form jobs, WeTransfer is fine too.</p>
+        <summary>Can you edit from raw property footage?</summary>
+        <p>Yes — send over your raw clips (drone, walkthrough, phone footage) and I'll shape them into a finished video.</p>
       </details>
       <details class="accordion__item">
-        <summary>How many revisions are included?</summary>
-        <p>Two rounds of revisions come with every project. Anything beyond that is billed at a small hourly add-on.</p>
+        <summary>Can you create videos from property photos only?</summary>
+        <p>Yes — a photo-only listing can still become a video, using motion, transitions and on-screen text to bring the space to life.</p>
       </details>
       <details class="accordion__item">
-        <summary>What formats do you deliver in?</summary>
-        <p>MP4 at whatever resolution and aspect ratio your platform needs — 9:16 for Shorts/Reels/TikTok, 16:9 for YouTube.</p>
+        <summary>Can you add maps and location information?</summary>
+        <p>Yes — location maps, neighborhood context, pricing and feature labels can all be added as animated graphics.</p>
       </details>
       <details class="accordion__item">
-        <summary>Do you work with international clients?</summary>
-        <p>Yes — most of my client work comes through Upwork alongside local Ethiopian clients. Time zones aren't a problem.</p>
+        <summary>Can you create cinematic B-roll?</summary>
+        <p>When real footage can't cover a shot, AI-assisted B-roll can fill the gap — used to support the story, never to misrepresent the property.</p>
       </details>
       <details class="accordion__item">
-        <summary>How fast can you turn a video around?</summary>
-        <p>Short-form edits typically land within 24–48 hours. Long-form videos depend on length and complexity — I'll always quote a timeline up front.</p>
+        <summary>How do I send my footage?</summary>
+        <p>A shared Google Drive or Dropbox folder works best for raw property footage.</p>
+      </details>
+      <details class="accordion__item">
+        <summary>How do revisions work?</summary>
+        <p>You'll review a first cut and share feedback before the final version is delivered.</p>
+      </details>
+      <details class="accordion__item">
+        <summary>What platforms can you create videos for?</summary>
+        <p>Vertical for Instagram Reels, TikTok and YouTube Shorts, and horizontal for YouTube, listing sites or a website.</p>
       </details>
     </div>
   </section>
 
   <!-- ============ CONTACT / FOOTER CTA ============ -->
   <section class="cta wrap" id="contact">
-    <h2 class="reveal">Got footage that needs a good edit?</h2>
+    <h2 class="reveal">Have a property worth showing?</h2>
+    <p class="section-sub cta__sub reveal">Send over your footage and let's turn it into something people actually watch.</p>
     <!-- ✏️ EDIT ME: replace with your real email address -->
-    <a href="mailto:YOUR_EMAIL@example.com" class="btn btn--primary btn--lg reveal">Email me</a>
+    <a href="mailto:YOUR_EMAIL@example.com" class="btn btn--primary btn--lg reveal">Work With Appy</a>
 
     <!-- ✏️ EDIT ME: replace # with your real profile links, or delete a line you don't use -->
     <div class="socials reveal">
@@ -337,4 +404,4 @@ DOCTYPE html>
 
 <script src="script.js"></script>
 </body>
-                                      </html>
+</html>
