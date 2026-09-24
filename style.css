@@ -1,7 +1,9 @@
-/* =====================================================================
+
+  * =====================================================================
    APPY CREATIVES — STYLESHEET
-   Organized top to bottom: tokens → base → header → hero → work tracks
-   → process → testimonials → faq → contact → footer → responsive.
+   Organized top to bottom: tokens → base → header → hero → intro video
+   → selected work → before/after → services → why → process → faq
+   → contact → footer → responsive.
    Search for a section's ALL-CAPS comment heading to jump to it.
 ===================================================================== */
 
@@ -179,8 +181,8 @@ a:focus-visible, button:focus-visible, summary:focus-visible {
 }
 .logo span { color: var(--accent); }
 
-.nav { display: flex; align-items: center; gap: 30px; }
-.nav a { font-size: 0.92rem; color: var(--muted); transition: color 0.15s ease; }
+.nav { display: flex; align-items: center; gap: 26px; }
+.nav a { font-size: 0.9rem; color: var(--muted); transition: color 0.15s ease; white-space: nowrap; }
 .nav a:hover { color: var(--text); }
 .nav__cta {
   color: var(--text) !important;
@@ -214,11 +216,7 @@ a:focus-visible, button:focus-visible, summary:focus-visible {
 .hero {
   position: relative;
   overflow: hidden;
-  display: grid;
-  grid-template-columns: 1.15fr 0.85fr;
-  gap: 48px;
-  align-items: center;
-  padding: 96px 24px 100px;
+  padding: 96px 24px 70px;
 }
 /* ✏️ EDIT ME: your photo sits here, faded behind the text. Upload a photo
    to images/hero-photo.jpg (exact name, top-level "images" folder) and
@@ -231,7 +229,7 @@ a:focus-visible, button:focus-visible, summary:focus-visible {
   background-image: url("images/hero-photo.jpg");
   background-size: cover;
   background-position: center top;
-  opacity: 0.4;
+  opacity: 0.35;
   z-index: 0;
 }
 .hero::after {
@@ -239,28 +237,25 @@ a:focus-visible, button:focus-visible, summary:focus-visible {
   position: absolute;
   inset: 0;
   background:
-    linear-gradient(100deg, var(--bg) 30%, rgba(14,14,16,0.55) 65%, rgba(14,14,16,0.25) 100%),
-    linear-gradient(0deg, var(--bg) 0%, transparent 35%);
+    linear-gradient(100deg, var(--bg) 45%, rgba(14,14,16,0.55) 75%, rgba(14,14,16,0.25) 100%),
+    linear-gradient(0deg, var(--bg) 0%, transparent 40%);
   z-index: 0;
 }
-.hero__text, .hero__reel { position: relative; z-index: 1; }
-.hero__sub { color: var(--muted); font-size: 1.08rem; max-width: 50ch; }
-.hero__actions { display: flex; gap: 14px; margin: 30px 0 46px; flex-wrap: wrap; }
+.hero__text { position: relative; z-index: 1; max-width: 62ch; }
+.hero__sub { color: var(--muted); font-size: 1.08rem; max-width: 55ch; }
+.hero__actions { display: flex; gap: 14px; margin: 30px 0 4px; flex-wrap: wrap; }
 
-.stats { display: flex; gap: 34px; flex-wrap: wrap; }
-.stat { display: flex; flex-direction: column; }
-.stat__num {
-  font-family: var(--font-display);
-  font-weight: 900;
-  font-size: 1.8rem;
-  color: var(--accent);
-}
-.stat__label { color: var(--muted); font-size: 0.85rem; max-width: 18ch; }
-
-.hero__reel { display: flex; flex-direction: column; align-items: center; gap: 14px; width: 100%; }
+/* =====================================================================
+   INTRO VIDEO — the prominent showreel section right below the hero
+===================================================================== */
+.intro { padding: 40px 0 90px; }
+.intro__head { text-align: center; max-width: 60ch; margin: 0 auto 30px; }
+.intro__sub { margin: 0 auto; }
 .reel-frame {
   position: relative;
   width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
   aspect-ratio: 16 / 9;
   background: #000;
   border: 1px solid var(--line);
@@ -270,12 +265,12 @@ a:focus-visible, button:focus-visible, summary:focus-visible {
 }
 .reel-frame iframe { width: 100%; height: 100%; border: 0; display: block; }
 .clip-code { font-family: var(--font-mono); font-size: 0.78rem; color: var(--muted); }
+.clip-code--center { display: block; text-align: center; margin-top: 14px; }
 
 /* =====================================================================
-   WORK TRACKS (shorts + long-form filmstrips)
+   SELECTED WORK — horizontal filmstrip of project cards
 ===================================================================== */
 .track { padding: 84px 0; border-top: 1px solid var(--line); }
-.track--alt { background: var(--surface); }
 .track__head {
   display: flex;
   justify-content: space-between;
@@ -314,35 +309,103 @@ a:focus-visible, button:focus-visible, summary:focus-visible {
   border: 1px solid var(--line);
   border-radius: var(--radius);
   overflow: hidden;
+  transition: border-color 0.2s ease, transform 0.2s ease;
 }
-.clip--vertical { width: 220px; }
+.clip:hover { border-color: var(--accent); transform: translateY(-3px); }
+.clip--vertical { width: 230px; }
 .clip--vertical .clip__frame { aspect-ratio: 9 / 16; }
-.clip--horizontal { width: 360px; }
-.clip--horizontal .clip__frame { aspect-ratio: 16 / 9; }
 
 .clip__frame { background: #000; }
 .clip__frame iframe { width: 100%; height: 100%; border: 0; display: block; }
 
-.clip__meta {
+.clip__meta { padding: 14px; }
+.clip__meta-top {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 10px;
-  padding: 12px 14px;
+  gap: 8px;
+  margin-bottom: 8px;
 }
-.clip__code { font-family: var(--font-mono); font-size: 0.72rem; color: var(--accent); }
-.clip__title { font-size: 0.86rem; color: var(--muted); text-align: right; }
+.clip__code { font-family: var(--font-mono); font-size: 0.7rem; color: var(--accent); }
+.clip__tag {
+  font-size: 0.68rem;
+  color: var(--muted);
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 2px 9px;
+}
+.clip__title { display: block; font-size: 0.92rem; font-weight: 600; margin-bottom: 4px; }
+.clip__desc { font-size: 0.8rem; color: var(--muted); margin: 0; }
+
+/* =====================================================================
+   BEFORE / AFTER — original vs. Appy version, side by side
+===================================================================== */
+.compares { padding: 90px 0; border-top: 1px solid var(--line); }
+.compare {
+  border-top: 1px solid var(--line);
+  padding: 40px 0;
+  display: grid;
+  grid-template-columns: 1fr 1.1fr;
+  gap: 36px;
+  align-items: start;
+}
+.compare__videos { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.compare__video { display: flex; flex-direction: column; gap: 8px; }
+.compare__label {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: var(--muted);
+  text-transform: uppercase;
+}
+.compare__label--accent { color: var(--accent); }
+.clip__frame--tall {
+  aspect-ratio: 9 / 16;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+.compare__note p { font-size: 0.95rem; }
+.compare__note p strong { color: #fff; }
+
+/* =====================================================================
+   SERVICES — "what I create"
+===================================================================== */
+.services { padding: 90px 0; border-top: 1px solid var(--line); }
+.services-grid {
+  margin-top: 34px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+.service-card { border-top: 2px solid var(--line); padding-top: 20px; }
+.service-card p { color: var(--muted); font-size: 0.95rem; }
+
+/* =====================================================================
+   WHY APPY
+===================================================================== */
+.why { padding: 90px 0; border-top: 1px solid var(--line); }
+.why__body { max-width: 62ch; margin-bottom: 0; }
+.pull-quote {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: clamp(1.5rem, 3.6vw, 2.2rem);
+  color: #fff;
+  border-left: 3px solid var(--accent);
+  padding-left: 20px;
+  margin: 34px 0 0;
+  max-width: 40ch;
+}
 
 /* =====================================================================
    PROCESS
 ===================================================================== */
-.process { padding: 100px 0; }
+.process { padding: 90px 0; border-top: 1px solid var(--line); }
 .steps {
   list-style: none;
   margin: 40px 0 0;
   padding: 0;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
   gap: 30px;
 }
 .step {
@@ -359,83 +422,9 @@ a:focus-visible, button:focus-visible, summary:focus-visible {
 .step p { color: var(--muted); }
 
 /* =====================================================================
-   TESTIMONIALS — subtitle / caption styling
-===================================================================== */
-.captions { padding: 100px 0; }
-.caption-stage { margin-top: 40px; }
-
-.caption-list {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  position: relative;
-  min-height: 220px;
-}
-.caption-card {
-  display: none;
-  background: #000;
-  border: 1px solid var(--line);
-  border-radius: var(--radius);
-  padding: 44px 40px 28px;
-  animation: caption-in 0.4s ease;
-}
-.caption-card.is-active { display: block; }
-@keyframes caption-in {
-  from { opacity: 0; transform: translateY(6px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-.caption-card p {
-  font-family: var(--font-display);
-  font-size: clamp(1.2rem, 2.6vw, 1.6rem);
-  font-weight: 700;
-  line-height: 1.35;
-  color: #fff;
-  max-width: 60ch;
-}
-.lower-third {
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  margin-top: 18px;
-  border-left: 3px solid var(--accent);
-  padding-left: 12px;
-}
-.lower-third__name { font-weight: 600; font-size: 0.92rem; }
-.lower-third__role { color: var(--muted); font-size: 0.82rem; }
-
-.caption-controls {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 18px;
-  margin-top: 24px;
-}
-.caption-controls button {
-  width: 38px;
-  height: 38px;
-  border-radius: 50%;
-  border: 1px solid var(--line);
-  background: transparent;
-  color: var(--text);
-  cursor: pointer;
-  font-size: 1.1rem;
-}
-.caption-controls button:hover { border-color: var(--accent); color: var(--accent); }
-.caption-dots { display: flex; gap: 8px; }
-.caption-dots span {
-  width: 7px;
-  height: 7px;
-  border-radius: 50%;
-  background: var(--line);
-  cursor: pointer;
-  transition: background 0.15s ease;
-}
-.caption-dots span.is-active { background: var(--accent); }
-
-/* =====================================================================
    FAQ
 ===================================================================== */
-.faq { padding: 100px 0; }
+.faq { padding: 90px 0; border-top: 1px solid var(--line); }
 .accordion { margin-top: 34px; border-top: 1px solid var(--line); }
 .accordion__item {
   border-bottom: 1px solid var(--line);
@@ -450,6 +439,7 @@ a:focus-visible, button:focus-visible, summary:focus-visible {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 16px;
 }
 .accordion__item summary::-webkit-details-marker { display: none; }
 .accordion__item summary::after {
@@ -458,6 +448,7 @@ a:focus-visible, button:focus-visible, summary:focus-visible {
   color: var(--accent);
   transition: transform 0.2s ease;
   margin-left: 20px;
+  flex-shrink: 0;
 }
 .accordion__item[open] summary::after { transform: rotate(45deg); }
 .accordion__item p { color: var(--muted); margin: 14px 0 0; max-width: 62ch; }
@@ -466,13 +457,15 @@ a:focus-visible, button:focus-visible, summary:focus-visible {
    CONTACT / CTA
 ===================================================================== */
 .cta {
-  padding: 120px 24px;
+  padding: 110px 24px;
   text-align: center;
   display: flex;
   flex-direction: column;
   align-items: center;
+  border-top: 1px solid var(--line);
 }
-.cta h2 { max-width: 16ch; }
+.cta h2 { max-width: 18ch; }
+.cta__sub { margin: 0 auto 30px; }
 .socials {
   display: flex;
   gap: 26px;
@@ -499,9 +492,8 @@ a:focus-visible, button:focus-visible, summary:focus-visible {
    RESPONSIVE
 ===================================================================== */
 @media (max-width: 900px) {
-  .hero { grid-template-columns: 1fr; padding-top: 60px; }
-  .hero__reel { order: -1; }
-  .steps { grid-template-columns: 1fr; gap: 40px; }
+  .services-grid { grid-template-columns: repeat(2, 1fr); }
+  .compare { grid-template-columns: 1fr; }
 }
 
 @media (max-width: 720px) {
@@ -519,12 +511,15 @@ a:focus-visible, button:focus-visible, summary:focus-visible {
     overflow: hidden;
     transition: max-height 0.25s ease;
   }
-  .nav.is-open { max-height: 320px; }
+  .nav.is-open { max-height: 360px; }
   .nav a { width: 100%; padding: 16px 24px; border-bottom: 1px solid var(--line); }
   .nav__cta { border: none; padding: 16px 24px; }
   .nav-toggle { display: flex; }
   .site-header { top: 22px; }
 
   .track__head { flex-direction: column; align-items: flex-start; }
+  .compare__videos { grid-template-columns: 1fr; }
+  .services-grid { grid-template-columns: 1fr; }
   .cta { padding: 90px 24px; }
+  .intro__head { text-align: left; }
 }
