@@ -228,7 +228,7 @@ a:focus-visible, button:focus-visible, summary:focus-visible {
   background-image: url("images/hero-photo.jpg");
   background-size: cover;
   background-position: center top;
-  opacity: 0.6;
+  opacity: 0.9;
   z-index: 0;
 }
 .hero::after {
@@ -236,8 +236,9 @@ a:focus-visible, button:focus-visible, summary:focus-visible {
   position: absolute;
   inset: 0;
   background:
-    linear-gradient(100deg, var(--bg) 25%, rgba(14,14,16,0.4) 70%, rgba(14,14,16,0.1) 100%),
-    linear-gradient(0deg, var(--bg) 0%, transparent 40%);
+    linear-gradient(100deg, var(--bg) 8%, rgba(14,14,16,0.5) 42%, rgba(14,14,16,0.08) 68%, transparent 100%),
+    linear-gradient(0deg, var(--bg) 0%, transparent 30%),
+    radial-gradient(ellipse at 70% 35%, transparent 45%, rgba(0,0,0,0.45) 100%);
   z-index: 0;
 }
 .hero__text { position: relative; z-index: 1; max-width: 62ch; }
@@ -475,6 +476,17 @@ a:focus-visible, button:focus-visible, summary:focus-visible {
 .socials a { color: var(--muted); font-size: 0.9rem; }
 .socials a:hover { color: var(--accent); }
 
+.phones {
+  display: flex;
+  gap: 26px;
+  margin-top: 24px;
+  flex-wrap: wrap;
+  justify-content: center;
+  font-family: var(--font-mono);
+}
+.phones a { color: var(--text); font-size: 0.85rem; }
+.phones a:hover { color: var(--accent); }
+
 /* =====================================================================
    FOOTER
 ===================================================================== */
@@ -521,4 +533,4 @@ a:focus-visible, button:focus-visible, summary:focus-visible {
   .services-grid { grid-template-columns: 1fr; }
   .cta { padding: 90px 24px; }
   .intro__head { text-align: left; }
-}
+            }
